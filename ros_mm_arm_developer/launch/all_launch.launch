@@ -1,0 +1,4 @@
+<launch>
+	<include file="$(find ros_mm_arm_controller)/launch/controller.launch"/>
+
+</launch>

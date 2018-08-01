@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find ros_mm_arm_controller)/launch/controller.launch"/>
+
+    <!-- Call moveit Demo -->
+	<include file="$(find ros_mm_arm_moveit_config)/launch/demo_real.launch"/>
+	
+</launch>
+
+

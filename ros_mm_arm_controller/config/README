@@ -1,0 +1,30 @@
+Joint names
+************
+
+arm_shoulder_pan_joint
+arm_shoulder_lift_joint
+arm_wrist_flex_joint
+
+gripper_link_joint   // not use
+gripper_joint
+
+
+1st Arm 
+*******
+( this must be torque off while running)
+      Joint names 			  servo id
+arm_shoulder_pan_joint    -> 	8
+arm_shoulder_lift_joint	  -> 	4
+arm_wrist_flex_joint	  ->	5
+gripper_joint 			  ->	7
+
+2nd Arm
+*******
+      Joint names 			  servo id
+arm_shoulder_pan_joint    -> 	3
+arm_shoulder_lift_joint	  -> 	6
+arm_wrist_flex_joint	  ->	2
+gripper_joint 			  ->	1
+
+
+IF YOU WANT TO TORQUE OFF ARM 1 CALL ROSSERVICE /JOINT/torque_enable

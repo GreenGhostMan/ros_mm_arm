@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="ros_mm_arm_vision" name="find_obj_parallel" type="find_obj_parallel.py"/>
+
+	<node pkg="ros_mm_arm_vision" name="calculate_transform" type="calculate_transform.py"/>
+</launch>

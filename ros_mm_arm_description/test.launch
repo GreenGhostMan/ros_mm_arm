@@ -1,0 +1,18 @@
+<launch>
+  <!-- To use, first set Environment variable TURTLEBOT_ARM1 to either:
+   turtlebot or pincher (for Trossen PhantomX Pincher)
+   NOTE: passing arm_type as argument NOT yet fully supported! -->
+
+  <arg name="simulation" default="false"/>
+
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find ros_mm_arm_description)/urdf/ros_mm_arm.urdf'"/>
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="True"/>
+  </node>
+
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
+    <param name="publish_frequency" type="double" value="10.0"/>
+  </node>
+<node pkg="rviz" type="rviz" name="arm_rviz"/>
+</launch>

@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="ros_mm_arm_developer" name="grasp_client" type="grasp_client"/>
+
+	<node pkg="ros_mm_arm_developer" name="grasp_server" type="grasp_server"/>
+</launch>

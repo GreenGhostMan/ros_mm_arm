@@ -1,0 +1,66 @@
+joints: ['arm_shoulder_pan_joint', 'arm_shoulder_lift_joint', 'arm_wrist_flex_joint', 'gripper_joint']
+arm_shoulder_pan_joint:
+  controller:
+    package: dynamixel_controllers
+    module: joint_position_controller_dual_motor
+    type: JointPositionControllerDual
+  joint_name: arm_shoulder_pan_joint
+  joint_speed: 1.5
+  motor_master:
+    id: 8
+    init: 512
+    min: 0
+    max: 1023
+  motor_slave:
+    id: 3
+arm_shoulder_lift_joint:
+  controller:
+    package: dynamixel_controllers
+    module: joint_position_controller_dual_motor
+    type: JointPositionControllerDual
+  joint_name: arm_shoulder_lift_joint
+  joint_speed: 1.0
+  motor_master:
+    id: 4
+    init: 512
+    min: 200
+    max: 800
+  motor_slave:
+    id: 6
+arm_wrist_flex_joint:
+  controller:
+    package: dynamixel_controllers
+    module: joint_position_controller_dual_motor
+    type: JointPositionControllerDual
+  joint_name: arm_wrist_flex_joint
+  joint_speed: 1.0
+  motor_master:
+    id: 5
+    init: 512
+    min: 200
+    max: 800
+  motor_slave:
+    id: 2
+gripper_joint:
+  controller:
+    package: dynamixel_controllers
+    module: joint_position_controller_dual_motor
+    type: JointPositionControllerDual
+  joint_name: gripper_joint
+  joint_speed: 1.5
+  motor_master:
+    id: 7
+    init: 512
+    min: 0
+    max: 900
+  motor_slave:
+    id: 1
+arm_controller:
+  controller:
+    package: dynamixel_controllers
+    module: joint_trajectory_action_controller
+    type: JointTrajectoryActionController
+  joint_trajectory_action_node: 
+    min_velocity: 0.1
+    constraints:
+         goal_time: 0.1
